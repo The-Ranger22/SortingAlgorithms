@@ -43,13 +43,13 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AssemblyInfo.fs" />
-        <Compile Include="Program.fs" />
         <Content Include="packages.config" />
-        <Compile Include="algorithms\bubblesort.fs" />
-        <Compile Include="algorithms\mergesort.fs" />
         <Compile Include="algorithms\insertionsort.fs" />
         <Compile Include="algorithms\selectionsort.fs" />
+        <Compile Include="algorithms\bubblesort.fs" />
+        <Compile Include="algorithms\mergesort.fs" />
         <Compile Include="algorithms\heapsort.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
     <Import Project="$(FSharpTargetsPath)" Condition="Exists('$(FSharpTargetsPath)')" />
 </Project>
