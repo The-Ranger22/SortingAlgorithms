@@ -14,7 +14,9 @@ let PICK_R = 2
 ///      leftI : the index of the left element that we want to compare
 ///     rightI : the index of the right element that we want to compare
 /// [Description] ->
-///     compareLeftRight 
+///     Determines if the element located in the left array at the left index provided is greater than the element located
+///     in the right array at the right index provided. Returns PICK_L (1) if the left element is less than the right element.
+///     Returns PICK_R (2) if the right element is less than the left element. Returns 0 if something funky happens.
 let compareLeftRight (left: int [], right: int [], leftI: int, rightI: int) =
     if not (leftI >= left.Length || rightI >= right.Length) then  //if neither index is outside of bounds for their respective arrays, compare the elements at those indices 
         if left.[leftI] < right.[rightI] then //if the element at the left index is smaller, return PICK_L
@@ -31,7 +33,10 @@ let compareLeftRight (left: int [], right: int [], leftI: int, rightI: int) =
             
 /// slottogether : returns an array of ints
 /// [Parameters] ->
+///      left : An ordered array of ints
+///     right : An ordered array of ints
 /// [Description] ->
+///     Interleaves the elements of two arrays, left and right, into a new array in ascending order.
 let slottogether (left: int [], right: int []) =
     let arr: int [] = Array.zeroCreate (left.Length + right.Length)
     let mutable leftI = 0
@@ -45,9 +50,13 @@ let slottogether (left: int [], right: int []) =
     
 
 
-///merge : returns an array of ints
+/// merge : returns an array of ints
 /// [Parameters] ->
+///     arr : an array of ints
 /// [Description] ->
+///     Sorts an array of integers by recursively subdividing the front half, called left, part of the array before doing
+///     the same for the back half, called right. After that, the resulting arrays, left and right, are interleaved
+///     together and the resulting array is returned.
 let rec merge (arr: int []) =
     if arr.Length > 1 then
         let left = merge arr.[0..(arr.Length / 2 - 1)]
@@ -57,7 +66,9 @@ let rec merge (arr: int []) =
         arr
 /// mergesort : returns an array of ints
 /// [Parameters] ->
+///     arr : an  array of ints
 /// [Description] ->
+///     Helper function for the recursive merge function
 let mergesort (arr: int []) =
     merge arr
 ///
