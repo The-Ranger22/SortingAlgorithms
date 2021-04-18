@@ -45,8 +45,8 @@
         <Compile Include="AssemblyInfo.fs" />
         <Content Include="packages.config" />
         <Compile Include="algorithms\insertionsort.fs" />
-        <Compile Include="algorithms\selectionsort.fs" />
         <Compile Include="algorithms\bubblesort.fs" />
+        <Compile Include="algorithms\selectionsort.fs" />
         <Compile Include="algorithms\mergesort.fs" />
         <Compile Include="algorithms\heapsort.fs" />
         <Compile Include="Program.fs" />
