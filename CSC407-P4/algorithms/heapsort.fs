@@ -1,7 +1,7 @@
 ﻿module CSC407_P4.algorithms.heapsort
 
 open CSC407_P4.algorithms
-open bubblesort
+open bubblesort /// I use the swap function from bubblesort
 
 
 (*Implementation of heapsort. Heapsort works by converting the list into a max-heap, where the largest element is stored at the root. 
