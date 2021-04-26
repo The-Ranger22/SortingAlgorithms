@@ -11,6 +11,7 @@ module Program =
         printfn "selection-sort : %A" (selectionsort.selectionsort arr.[0..]) //pass in a copy of the array to be sorted
         printfn "merge-sort     : %A" (mergesort.mergesort arr.[0..]) //pass in a copy of the array to be sorted
         printfn "heap-sort      : %A" (heapsort.heapsort arr.[0..]) //pass in a copy of the array to be sorted
+        printfn "quick-sort      : %A" (quicksort.quicksort (arr.[0..], 0, arr.Length - 1)) //pass in a copy of the array to be sorted
         0 // return an integer exit code
 /// F# Arrays:
 ///    declaration : let arr = [||], use ';' to separate elements

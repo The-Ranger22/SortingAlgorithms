@@ -49,6 +49,7 @@
         <Compile Include="algorithms\selectionsort.fs" />
         <Compile Include="algorithms\mergesort.fs" />
         <Compile Include="algorithms\heapsort.fs" />
+        <Compile Include="algorithms\quicksort.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
     <Import Project="$(FSharpTargetsPath)" Condition="Exists('$(FSharpTargetsPath)')" />
